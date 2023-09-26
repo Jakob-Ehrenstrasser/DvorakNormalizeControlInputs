@@ -315,5 +315,6 @@ InputID := DllCall("GetKeyboardLayout", "UInt", 0, "UInt")
 #space::
 {
     Send "#{Space}"
+    Sleep(500)
     Reload
 }
