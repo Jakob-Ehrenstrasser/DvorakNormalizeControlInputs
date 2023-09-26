@@ -214,7 +214,9 @@ InputID := DllCall("GetKeyboardLayout", "UInt", 0, "UInt")
 *<!n::
 *#n::
 {
+    RegWrite "0", "REG_DWORD", "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\System", "DisableLockWorkstation"
     Send "{Blind}l"
+    RegWrite "1", "REG_DWORD", "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\System", "DisableLockWorkstation"
     return
 }
     
